@@ -76,4 +76,9 @@ defmodule SCF.HTTP do
       [{key, value} | headers]
     end
   end
+
+  @doc false
+  def common_params do
+    @common_params
+  end
 end
