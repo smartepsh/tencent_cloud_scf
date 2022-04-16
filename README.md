@@ -1,5 +1,7 @@
 # SCF - Tencent Cloud SCF Elixir SDK
 
+![Hex.pm Version](https://img.shields.io/hexpm/v/tencent_cloud_scf)
+
 - Tencent Cloud SCF API Document: [en-us](https://intl.cloud.tencent.com/document/product/583/17241) or [zh-cn](https://cloud.tencent.com/document/product/583/17234)
 
 - Use [signature v3](https://intl.cloud.tencent.com/document/product/583/31703) and `POST` only.
