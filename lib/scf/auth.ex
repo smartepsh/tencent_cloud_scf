@@ -83,5 +83,5 @@ defmodule SCF.Auth do
   end
 
   defp hash_sha256(data), do: :crypto.hash(:sha256, data)
-  defp hmac_sha256(key, data), do: :crypto.mac(:hmac, :sha256, key, data)
+  defp hmac_sha256(key, data), do: SCF.Utils.hmac(:sha256, key, data)
 end
