@@ -1,4 +1,7 @@
 defmodule SCF.API.LayerManagement do
+  @moduledoc """
+  Some shortcut functions for [LayerManagement APIs](https://intl.cloud.tencent.com/document/product/583/36315)
+  """
   use SCF.API,
     actions: [
       :publish_layer_version,

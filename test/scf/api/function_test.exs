@@ -1,9 +1,10 @@
-defmodule SCF.API.Function do
-  @moduledoc """
-  Some shortcut functions for [Function APIs](https://intl.cloud.tencent.com/document/product/583/17242)
-  """
-  use SCF.API,
-    actions: [
+defmodule SCF.API.FunctionTest do
+  use ExUnit.Case, async: true
+
+  alias SCF.API.Function, as: APIModule
+
+  test "exported all expected functions" do
+    all_functions = [
       :invoke,
       :update_function_configuration,
       :update_function_code,
@@ -33,4 +34,13 @@ defmodule SCF.API.Function do
       :invoke_function,
       :get_request_status
     ]
+
+    {:module, _} = Code.ensure_loaded(APIModule)
+
+    for function_name <- all_functions do
+      assert function_exported?(APIModule, function_name, 0)
+      assert function_exported?(APIModule, function_name, 1)
+      assert function_exported?(APIModule, function_name, 2)
+    end
+  end
 end
